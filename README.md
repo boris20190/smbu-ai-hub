@@ -1,18 +1,21 @@
 # SMBU AI Hub
 
-面向 SMBU 校园网的 AI API 网关与用户门户。
+面向 SMBU 校园网的 AI API 网关与用户门户，基于上游 New API 开发。
 
-## 主要功能
+## 二次开发内容
 
-- 多模型 API 接入与统一管理
-- API Key、用量和兑换码管理
-- 校园邮箱注册与图形验证码
-- 常用客户端使用教程
-- 用户反馈管理
+- 支持 SMBU 校园邮箱注册，并加入服务端图形验证码
+- 重构用户概览与模型市场，集中展示 API Key、额度与用量、定价及兑换入口
+- 提供登录鉴权后的 CC Switch 镜像与下载入口
+- 提供 Cherry Studio、RikkaHub、CC Switch、VS Code / Codex 中文教程
+- 支持用户提交反馈，并由管理员集中查看
+- 修复图像生成计费、Token 分组一致性、Claude 与流式中继兼容问题
 
 ## 快速开始
 
 ```bash
+git clone https://github.com/boris20190/smbu-ai-hub.git
+cd smbu-ai-hub
 cp .env.example .env
 
 docker build -t smbu-ai-hub .
@@ -30,6 +33,8 @@ docker run -d --name smbu-ai-hub \
 
 基于 [QuantumNous/new-api](https://github.com/QuantumNous/new-api) 开发。
 
+继承 New API 的多供应商模型接入、渠道、用户与计费管理能力。
+
 ## 许可证
 
 [GNU AGPL-3.0](./LICENSE)
@@ -39,6 +44,9 @@ docker run -d --name smbu-ai-hub \
 ## 上游 New API 文档
 
 以下为上游项目的原始说明。
+
+<details>
+<summary>展开查看完整上游 README</summary>
 
 <div align="center">
 
@@ -516,3 +524,5 @@ If this project is helpful to you, welcome to give us a ⭐️ Star！
 <sub>Built with ❤️ by QuantumNous</sub>
 
 </div>
+
+</details>
