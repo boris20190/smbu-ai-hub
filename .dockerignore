@@ -1,0 +1,52 @@
+# Git and repository metadata
+.git
+.git/**
+.github
+.gitignore
+.gitattributes
+
+# Local environments and credentials
+.env
+.env.*
+!.env.example
+.envrc
+.direnv/
+*.key
+*.pem
+*.p12
+*.pfx
+*.jks
+*.keystore
+
+# Dependencies and generated frontend assets
+/node_modules/
+/web/node_modules/
+/web/dist/
+/web/default/node_modules/
+/web/default/dist/
+/web/classic/node_modules/
+/web/classic/dist/
+
+# Runtime data and local databases
+/data/
+/logs/
+/upload/
+/downloads/
+/build/
+/backups/
+*.db
+*.db-journal
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+*.sqlite-*
+*.sqlite3-*
+
+# Local tooling and files unused by the image build
+*.md
+.vscode
+Makefile
+docs
+.eslintcache
+.gocache
